@@ -1,0 +1,31 @@
+/*dark purple nav bar background color*/
+.bck-color {
+    background-color: #32094f; 
+}
+
+/* Larger font size for the brand */
+.navbar-brand {
+    font-family: 'Stardos Stencil';
+    font-size: 60px; 
+    color: white; /* White text color */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* White text color for all nav links */
+.nav-link {
+    color: white !important; 
+}
+
+/* Larger font size for specific nav link */
+.bigger-font {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 20px; 
+}
+
+/* Remove default margin for navbar-brand */
+.navbar-brand {
+    margin-right: 0;
+}

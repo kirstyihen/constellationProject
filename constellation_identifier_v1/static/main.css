@@ -29,3 +29,56 @@
 .navbar-brand {
     margin-right: 0;
 }
+
+
+.welcome-message {
+    background-color: #32094f; 
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+.welcome-message * {
+    color: white !important;
+}
+
+.feature-box {
+    background-color: #32094f; 
+    color: white; 
+    text-align: center; 
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.feature-box h4 {
+    margin: 0; 
+    font-size: 24px; 
+    font-weight: normal; 
+    letter-spacing: 1px; 
+}
+
+
+.feature-box i.fas.fa-star,
+.feature-box i.fas.fa-clipboard-list {
+    color: white;  
+    font-size: 54px; 
+    padding-bottom: 10px;
+}
+
+.feature-box i.fas.fa-star-and-crescent {
+    color: white; 
+    font-size: 54px; 
+    padding-bottom: 10px;
+}
+
+.feature-box {
+    cursor: pointer; 
+}

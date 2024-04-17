@@ -1,0 +1,14 @@
+
+.feature-box-wide {
+    background-color: #32094f; 
+    color: white; 
+    text-align: center; 
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    flex-direction: column;
+}

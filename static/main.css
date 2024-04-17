@@ -44,6 +44,10 @@
     color: white !important;
 }
 
+a {
+    color: white !important;
+}
+
 .feature-box {
     background-color: #32094f; 
     color: white; 

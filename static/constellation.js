@@ -3,8 +3,13 @@ $(document).ready(function(){
         window.location.href = '/starGallery';
     });
 
-    $('#test').click(function(){
-        window.location.href = '/test';
+    $('#quiz').click(function(){
+        window.location.href = '/quiz';
+    });
+
+    $('#quiz-button').click(function(){
+        const id = 0;
+        window.location.href = '/quiz/' + id;
     });
 
     $('#surprise').click(function(){

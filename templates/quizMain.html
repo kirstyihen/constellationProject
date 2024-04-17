@@ -6,15 +6,40 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid">  
+    <!-- Row for the welcome message with new styling -->
+    <div class="row welcome-message">
+      <div class="col-12 text-center">
+        <br>
+        <br>
+        <br>
+        <h2>Ready to test your knowledge?</h2>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  
 
-<div class="container-fluid pt-4"> 
-    <div class="row mb-3">
-        <div class="col-12">Ready to test your knowledge?</div>
+  
+    <!-- Row for the three feature columns -->
+    <div class="row justify-content-center">
+      <!-- Justify-content-center will center the cols inside the row -->
+      <div class="col-md-4">
+          <div class="feature-box" id="gallery">
+            <i class="fas fa-star"></i>
+            <h4>Star Gallery</h4>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="feature-box" id="quiz-button">
+            <i class="fas fa-clipboard-list"></i>
+            <h4>Start Quiz</h4>
+          </div>
+        </div>
+        
     </div>
-    <div class="row">
-        <div class="col-6"><a href="starGallery">Star Gallery</a></div>
-        <div class="col-6"><a href="quiz/0">Start Quiz</a></div>
-    </div>
-</div>
+  </div>
+
 {% endblock %}
-

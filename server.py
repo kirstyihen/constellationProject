@@ -38,6 +38,7 @@ current_question = 0
 quiz_responses = []
 correct_answers = ['1','0','1']
 incorrect = 0
+score = 3 - incorrect
 
 def log_activity(page_name):
     entry = f"{datetime.now()}: Page accessed - {page_name}"
@@ -98,8 +99,8 @@ def save_shop():
 
 @app.route('/quiz/results')
 def results_quiz():
-    global quiz_responses, correct_answers, incorrect
-    return render_template('quizResults.html', responses=quiz_responses, correct=correct_answers, incorrect=incorrect) 
+    global quiz_responses, correct_answers, incorrect, score
+    return render_template('quizResults.html', responses=quiz_responses, correct=correct_answers, incorrect=incorrect, score = score) 
 
 
 @app.route('/quiz/<id>')

@@ -9,17 +9,21 @@
 
 <div class="container-fluid pt-4"> 
     <div class="row mb-3">
-        <div class="col-12">Results: {{incorrect}} questions incorrect.</div>
+        <div class="col-12 welcome-message"> 
+            <h2>Your Results</h2>
+            <h1><b> {{ score }} / 3 </b></h1>
+            <h4>Well done!</h4>
+        </div>
     </div>
-    <div class="row">
+    <div class="row welcome-message">
         {% for response in responses %}
             {% if response == correct[loop.index0] %}
                 <div class="col-12">
-                    Question {{loop.index}} right
+                    Question {{loop.index}}: Correct! :)
                 </div>
             {% else %}
                 <div class="col-12">
-                    Question {{loop.index}} wrong
+                    Question {{loop.index}}: Incorrect :(
                 </div>
             {% endif %}
         {% endfor %}  

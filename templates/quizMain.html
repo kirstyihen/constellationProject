@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='quiz.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid pt-4"> 
+    <div class="row mb-3">
+        <div class="col-12">Ready to test your knowledge?</div>
+    </div>
+    <div class="row">
+        <div class="col-6"><a href="starGallery">Star Gallery</a></div>
+        <div class="col-6"><a href="quiz/0">Start Quiz</a></div>
+    </div>
+</div>
+{% endblock %}
+

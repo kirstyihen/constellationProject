@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='quiz.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid p-4"> 
+    <div class="row mb-3">
+        <div class="col-12">{{question.question}}</div>
+        {% if question.image_url | length != 0 %}
+            <div class="col-12">
+                <img class="question-img" alt="{{question.image_alt}}" src={{question.image_url}}>
+            </div>
+        {% else %}
+            
+        {% endif %}
+    </div>
+    <div class="row">
+        {% for choice in question.choices %}
+            <!-- Content to render for each item in the iterable -->
+            <div class="col-6"><a href="/quiz/add_response/{{loop.index - 1}}">{{choice}}</a></div>
+        {% endfor %}        
+    </div>
+</div>
+{% endblock %}
+

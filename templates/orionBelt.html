@@ -1,18 +1,43 @@
 {% extends "layout.html" %}
 
-{% block head %}
-    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
-{% endblock %}
-
 {% block content %}
 <div class="container-fluid">
-    <div class="bigger-font">
-        This is the Orion Belt page
+    <div class="row">
+        <!-- Title Column (Full Width) -->
+        <div class="col-12">
+            <h2 class="text-center">{{ data.name }}</h2>
+        </div>
     </div>
-    <div>
-        <div class="triangle-left" onclick="window.location.href='/learning/4'"></div>
-        <div class="triangle-right" onclick="window.location.href='/learning/2'"></div>
+    <div class="row">
+        <!-- Image Column -->
+        <div class="col-md-6">
+            <img src="{{ data.image }}" alt="{{ data.name }} Image" class="img-fluid">
+        </div>
+        
+        <!-- Text Column -->
+        <div class="col-md-6">
+            <div class="info-section">
+                <p><strong>Quick facts:</strong></p>
+                <ul>
+                    {% for fact in data.facts %}
+                    <li>{{ fact }}</li>
+                    {% endfor %}
+                </ul>
+                <p><strong>The story behind:</strong></p>
+                <ul>
+                    <li>{{ data.myth }}</li>
+                </ul>
+                <p><strong>How to find it:</strong></p>
+                <ul>
+                    <li>{{ data.finding_tips }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <!-- Navigation arrows -->
+        <div class="triangle-left" onclick="window.location.href='/learning/{{ data.prev_id }}';"></div>
+        <div class="triangle-right" onclick="window.location.href='/learning/{{ data.next_id }}';"></div>
     </div>
 </div>
 {% endblock %}
-

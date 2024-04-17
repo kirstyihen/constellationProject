@@ -5,7 +5,64 @@ from datetime import datetime
 app = Flask(__name__)
 
 
-dataLearning = []
+dataLearning = [
+    {
+        "id": 1,
+        "name": "Orion's Belt",
+        "image": "https://cdn.mos.cms.futurecdn.net/jBaW3ZCr6XK4zM5wRaCUxc-1200-80.jpg.webp",
+        "facts": [
+            "Orion’s belt is an asterism of three stars within the constellation Orion, the Hunter.",
+            "On the left side of the belt is the star Alnitak, which is roughly 800 light-years away. At the middle of the belt is Alnilam, which is approximately 1,300 light-years away. On the right side, about 900 light-years away, is Mintaka.",
+            "All three stars are several times larger and brighter than our sun!"
+        ],
+        "myth": "Greek mythology says that Orion the Hunter was chasing the Pleiades (seven sisters) on Earth, and Zeus put them in the sky for safety. Orion is still chasing them there.",
+        "finding_tips": "To find Orion's Belt, look for the hourglass shape of Orion and the three stars that create the narrow part of the hourglass form Orion's Belt. In late November, Orion appears to be lying on his side, with the three stars of the belt pointing upward, in the Northern Hemisphere.",
+        "prev_id": 4,
+        "next_id": 2
+    },
+    {
+    "id": 2,
+    "name": "Leo",
+    "image": "https://arabiannightsrum.com/wp-content/uploads/2021/02/Leo-star-constellation-810x500.png",
+    "facts": [
+        "Leo is the 12th largest constellation in size",
+        "Leo belongs to the popular Zodiac family of constellations (Aries, Gemini, etc)",
+        "In English, the constellation is known as the Lion."
+    ],
+    "myth": "The Greeks associated Leo with the Nemean lion, the beast defeated by Zeus’ son, Heracles (Hercules), during the first of his twelve labors toward repenting for murdering his family. Ancient pioneers of science and literature wrote that the lion was placed among the constellations because it was the king of beasts.",
+    "finding_tips": "First locate the Big Dipper, then follow the curve of its handle away from the dipper's bowl until you reach a bright star. This star is part of Leo's backward question mark shape, which outlines the lion's mane.",
+    "prev_id": 1,
+    "next_id": 3
+    },
+
+    {
+        "id": 3,
+        "name": "Big Dipper",
+        "image": "https://blog.nameastarlive.com/wp-content/uploads/uma_pinterest_560.jpg",
+        "facts": [
+            "The Big Dipper is an asterism of the constellation Ursa Major, the Greater Bear.",
+            "The stars of the Big Dipper outline the Bear’s tail and hindquarters.",
+            "As Earth spins, the Big Dipper and its sky neighbor, the Little Dipper, rotate around the North Star, also known as Polaris."
+        ],
+        "myth": "In Greek mythology, the constellations Ursa Major and Ursa Minor are associated with the myth of Arcas and his mother Callisto. Callisto was a nymph who had a son by Zeus and was transformed into a bear by the jealous Hera. Callisto’s son, Arcas, grew up to be a hunter and became king of Arcadia. During one of his hunts, he came across the bear and, not knowing that it was his mother, he aimed an arrow at it. Zeus prevented this by placing the mother and son into the sky as theconstellations Ursa Major and Ursa Minor. Castillo is associated with Ursa Major.",
+        "finding_tips": "The Big Dipper is one of the easiest star patterns to locate. It’s visible just about every clear night in the Northern Hemisphere. It has two parts, a bowl and a handle. So, look for a pattern that mimics a big dot-to-dot of a kitchen ladle!",
+        "prev_id": 2,
+        "next_id": 4
+    },
+    {
+        "id": 4,
+        "name": "Little Dipper",
+        "image": "https://cdn.mos.cms.futurecdn.net/8dAkqvtHb3Y7Vcjx2N8q3g-1200-80.jpg",
+        "facts": [
+            "The Little Dipper is an asterism whose stars belong to the constellation Ursa Minor, “the Little Bear.”",
+            "It is smaller and fainter than the Big Dipper."
+        ],
+        "myth": "In Greek mythology, the constellations Ursa Major and Ursa Minor are associated with the myth of Arcas and his mother Callisto. Callisto was a nymph who had a son by Zeus and was transformed into a bear by the jealous Hera. Callisto’s son, Arcas, grew up to be a hunter and became king of Arcadia. During one of his hunts, he came across the bear and, not knowing that it was his mother, he aimed an arrow at it. Zeus prevented this by placing the mother and son into the sky as the constellations Ursa Major and Ursa Minor. Arcas is associated with Ursa Minor.",
+        "finding_tips": "Look for the two outer stars in the bowl of the Big Dipper. They are called Dubhe and Merak, and they’re known as The Pointers. An imaginary line drawn between them points to Polaris, the North Star. And, once you have Polaris, you can find the Little Dipper, because Polaris is at the end of the Little Dipper’s handle.",
+        "prev_id": 3,
+        "next_id": 1
+    }
+]
 
 questions = [
     {
@@ -51,18 +108,12 @@ def hello_world():
 
 @app.route('/learning/<int:id>', methods=['GET', 'POST'])
 def render_page(id):
-    if id == 1:
-        log_activity("Orion's Belt")
-        return render_template('orionBelt.html')
-    if id == 2:
-        log_activity("Leo")
-        return render_template('leo.html')
-    if id == 3:
-        log_activity("Big Dipper")
-        return render_template('bigDipper.html')
-    if id == 4:
-        log_activity("Little Dipper")
-        return render_template('littleDipper.html')
+    entry = next((item for item in dataLearning if item["id"] == id), None)
+    if entry:
+        log_activity(entry['name'])
+        return render_template('orionBelt.html', data=entry)
+    else:
+        return "Page not found", 404
 
 
 @app.route('/starGallery')

@@ -138,3 +138,26 @@ a {
     margin-top: 20px;
     margin-left: 20px;
 }
+
+.info-section {
+    background-color: #f0f0f0; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+}
+
+
+.img-fluid {
+    width: 100%;
+    height: 100%;  
+    object-fit: cover;  
+}
+
+.info-section ul {
+    padding-left: 20px;  
+}
+
+.info-section li {
+    margin-left: 0px;  
+    list-style-position: outside;  
+}

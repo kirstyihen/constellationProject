@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container-fluid"> 
+    <div class="row welcome-message">
+        <div class="col-12 text-center">
+          <h2>    Constellations are stars arranged in the shape of an object, person or animal.  For example, the Big Dipper looks like a ladle! 
+            Asterisms are recognizable patterns of stars within constellations, such as the Big Dipper or Orion's Belt.</h2>
+        </div>
+      </div>
+    <div class="row">
+        <div class="clickable-rectangle feature-box" onclick="window.location.href='/learning/1';">Orion's Belt</div>
+        <div class="clickable-rectangle feature-box" onclick="window.location.href='/learning/2';">Leo</div>
+    </div>
+    <div class="row">
+        <div class="clickable-rectangle feature-box" onclick="window.location.href='/learning/3';">Big Dipper</div>
+        <div class="clickable-rectangle feature-box" onclick="window.location.href='/learning/4';">Little Dipper</div>
+    </div>
+</div>
+{% endblock %}
+

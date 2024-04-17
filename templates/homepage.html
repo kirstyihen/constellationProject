@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">  
+  <!-- Row for the welcome message with new styling -->
+  <div class="row welcome-message">
+    <div class="col-12 text-center">
+      <h2>Welcome! Get ready to dive into the most magical asterisms and constellations in the night sky. From Orion’s belt to the Big Dipper, we've got you covered. Let's explore the galaxy together!</h2>
+    </div>
+  </div>
+
+  <!-- Row for spacing or additional content -->
+  <div class="row">
+    <div class="col-md-12">
+      <!-- This div is for spacing or any additional content you want to place between the welcome message and the feature columns -->
+    </div>
+  </div>
+
+  <!-- Row for the three feature columns -->
+  <div class="row justify-content-center">
+    <!-- Justify-content-center will center the cols inside the row -->
+    <div class="col-md-4">
+        <div class="feature-box" id="gallery">
+          <i class="fas fa-star"></i>
+          <h4>Show me the star gallery</h4>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="feature-box" id="test">
+          <i class="fas fa-clipboard-list"></i>
+          <h4>Test my learning</h4>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="feature-box" id="surprise">
+          <i class="fas fa-star-and-crescent"></i>
+          <h4>Surprise me with a constellation</h4>
+        </div>
+      </div>
+  </div>
+</div>
+{% endblock %}

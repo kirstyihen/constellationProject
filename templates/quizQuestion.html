@@ -9,9 +9,9 @@
 </script>
 
 <div class="container-fluid p-4 quiz-main-cont"> 
-    <div class="row mb-3">
+    <div class="row mb-3 question-card">
         {% if question.image_url | length != 0 %}
-            <div class="col-12">
+            <div class="col-12 p-0">
                 <img class="question-img" alt="{{question.image_alt}}" src={{question.image_url}}>
             </div>
         {% else %}
@@ -21,13 +21,13 @@
             {{question.question}}
         </div>
     </div>
-    <div class="row">
+    <div class="row mb-3 question-choices-cont">
         {% for choice in question.choices %}
-            <div class="col-5 feature-box unselected-option" data-id="{{loop.index - 1}}">{{choice}}</div>
+            <div class="question-choice unselected-choice" data-id="{{loop.index - 1}}">{{choice}}</div>
         {% endfor %}      
     </div>
 
-    <div class="row">
+    <div class="row next-btn-cont">
         <div class="col-12 next-btn">Next question</div>
     </div>
 </div>

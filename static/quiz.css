@@ -12,35 +12,72 @@
     flex-direction: column;
 }
 
-.unselected-option {
-    background-color: lightgrey;
-    color: black;
-}
-
-.selected-option {
-    background-color: #32094f; 
-    color: white;
-}
-
 .next-btn {
     background-color: #32094f; 
     color: white;
     padding: 10px;
     cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.question-card {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(116, 116, 116, 0.2);
 }
 
 .question-img {
     max-height: 400px;
-    width: auto;
+    width: 100%;
     object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px 5px 0 0;
 }
 
 .quiz-main-cont {
     margin: auto;
+    width: 750px;
 }
 
 .question-text {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    color: rgb(86, 86, 86);
+    padding: 30px;
+}
+
+.question-choices-cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.question-choice {
+    display: flex;
+    justify-content: center;
+    min-height: 60px;
+    border-radius: 5px;
+    flex-direction: column;
+    width: 49%;
+    box-shadow: 0 0 10px rgba(116, 116, 116, 0.2);
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.unselected-choice {
+    background-color: white;
+    color: rgb(86, 86, 86);
+}
+
+.unselected-choice:hover {
+    background-color: rgb(212, 211, 211);
+}
+
+.selected-choice {
+    background-color: #32094f; 
+    color: white;
+}
+
+.selected-choice:hover {
+    background-color: #32094f;
 }

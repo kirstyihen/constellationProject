@@ -1,16 +1,17 @@
 $(document).ready(function() {
     console.log(question);
 
-    let selectedOption = "";
+    let selectedChoice = "";
+    $('.next-btn').hide();
 
-    $(".feature-box").click(function(){
-        selectedOption = $(this).data('id');
-        // console.log("selected:", selectedOption);
-        $(".selected-option").removeClass('selected-option');
-        $(this).addClass('selected-option');
+    $(".question-choice").click(function(){
+        selectedChoice = $(this).data('id');
+        $(".selected-choice").removeClass('selected-choice');
+        $(this).addClass('selected-choice');
+        $('.next-btn').show();
     })
 
     $(".next-btn").click(function(){
-        window.location.href = `/quiz/log_response/${selectedOption}`;
+        window.location.href = `/quiz/log_response/${selectedChoice}`;
     })
 })

@@ -1,6 +1,5 @@
 
 .feature-box-wide {
-    background-color: #32094f; 
     color: white; 
     text-align: center; 
     width: 300px;
@@ -11,4 +10,37 @@
     margin: 20px auto;
     border-radius: 10px;
     flex-direction: column;
+}
+
+.unselected-option {
+    background-color: lightgrey;
+    color: black;
+}
+
+.selected-option {
+    background-color: #32094f; 
+    color: white;
+}
+
+.next-btn {
+    background-color: #32094f; 
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.question-img {
+    max-height: 400px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-main-cont {
+    margin: auto;
+}
+
+.question-text {
+    font-size: 2.5rem;
 }

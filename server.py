@@ -1,6 +1,6 @@
 from flask import Flask, abort, redirect, url_for
 from flask import render_template
-from flask import Response, request,redirect, jsonify
+from flask import Response, request,redirect, jsonify, session
 from datetime import datetime
 app = Flask(__name__)
 
@@ -71,31 +71,86 @@ questions = [
         "image_url": "https://theplanets.org/123/2021/05/Orions-Belt-Asterism.jpg",
         "image_alt": "Picture of Orion's Belt",
         "choices": ["Constellation", "Asterism"],
-        "answer_id": 1, 
+        "answer_id": "1", 
+        "next_id": "1",
     },
     {
-        "id": 0,
+        "id": 1,
         "question": "Ursa Minor is more commonly known as...",
         "image_url": "https://star-name-registry.com/modules/starconstpg/views/img/new/ursaminor-cons-m.jpg",
         "image_alt": "Picture of Ursa Minor",
         "choices": ["Little Dipper", "Big Dipper"],
-        "answer_id": 0, 
+        "answer_id": "0", 
+        "next_id": "2",
     },
     {
-        "id": 0,
+        "id": 2,
         "question": "The Greeks associated _____ with the Nemean lion, the beast defeated by Zeus' son Heracles (Hercules) during the first of his twelve labors toward repenting for murdering his family.", 
         "image_url": "",
         "image_alt": "",
         "choices": ["Orion", "Leo"],
-        "answer_id": 1, 
+        "answer_id": "1", 
+        "next_id": "3",
+    },
+    {
+        "id": 3,
+        "question": "What is this constellation called?", 
+        "image_url": "https://images.app.goo.gl/dMgP78CgRQr7UktW8",
+        "image_alt": "Picture of constellation for quiz",
+        "choices": ["Leo", "Ursa Minor"],
+        "answer_id": "0", 
+        "next_id": "4",
+    },
+    {
+        "id": 4,
+        "question": "What are the names of these asterisms?", 
+        "image_url": "https://images.app.goo.gl/mEUtsuJs6GeyW9or9",
+        "image_alt": "Picture of asterisms for quiz",
+        "choices": ["Leo & Little Dipper", "Big Dipper & Little Dipper"],
+        "answer_id": "1", 
+        "next_id": "5",
+    },
+    {
+        "id": 5,
+        "question": "What is this asterism called?", 
+        "image_url": "https://itsreleased.com/wp-content/uploads/2023/08/Orions-Belt-Asterism.jpg",
+        "image_alt": "Picture of asterism for quiz",
+        "choices": ["Orion's Belt", "Little Dipper"],
+        "answer_id": "1", 
+        "next_id": "6",
+    },
+    {
+        "id": 6,
+        "question": "In Greek mythology, the constellations _________ and _________ are associated with the myth of Arcas and his mother Callisto. Callisto was a nymph who had a son by Zeus and was transformed into a bear by the jealous Hera.", 
+        "image_url": "",
+        "image_alt": "",
+        "choices": ["Ursa Major & Ursa Minor", "Big Dipper & Little Dipper"],
+        "answer_id": "0", 
+        "next_id": "7",
+    },
+    {
+        "id": 7,
+        "question": "What is the name of this constellation?", 
+        "image_url": "https://theplanets.org/123/2021/05/Orions-Belt-Asterism.jpg",
+        "image_alt": "Picture of constellation for quiz",
+        "choices": ["Orion", "Ursa Major"],
+        "answer_id": "0", 
+        "next_id": "end",
+    },
+    {
+        "id": 8,
+        "question": "What is the is one of the easiest star patterns to locate?", 
+        "image_url": "",
+        "image_alt": "",
+        "choices": ["Orion's Belt", "Big Dipper"],
+        "answer_id": "1", 
+        "next_id": "end",
     }
 ]
 
 current_question = 0
 quiz_responses = []
-correct_answers = ['1','0','1']
-incorrect = 0
-score = 3 - incorrect
+score = 0
 
 def log_activity(page_name):
     entry = f"{datetime.now()}: Page accessed - {page_name}"
@@ -122,7 +177,9 @@ def star_gallery():
 
 @app.route('/quiz')
 def start_quiz():
+    global quiz_responses, score
     quiz_responses.clear()
+    score = 0
     return render_template('quizMain.html')
 
 @app.route('/leo')
@@ -150,8 +207,9 @@ def save_shop():
 
 @app.route('/quiz/results')
 def results_quiz():
-    global quiz_responses, correct_answers, incorrect, score
-    return render_template('quizResults.html', responses=quiz_responses, correct=correct_answers, incorrect=incorrect, score = score) 
+    global quiz_responses, incorrect, score
+    print("responses:", quiz_responses)
+    return render_template('quizResults.html', responses=quiz_responses, score = score) 
 
 
 @app.route('/quiz/<id>')
@@ -164,12 +222,15 @@ def display_quiz(id):
     current_question = id     
     return render_template('quizQuestion.html', question=questions[id])
 
-@app.route('/quiz/add_response/<response_id>')
+@app.route('/quiz/log_response/<response_id>')
 def add_response(response_id):
-    global current_question, incorrect
-    quiz_responses.append(response_id)
-    if response_id != correct_answers[current_question]:
-        incorrect += 1
+    global current_question, score
+    # print("abt to log:", response_id)
+    if response_id == questions[current_question]["answer_id"]:
+        quiz_responses.append((response_id, True))
+        score += 1
+    else:
+        quiz_responses.append((response_id, False))
 
     if current_question != len(questions) - 1:
         return redirect(url_for('display_quiz', id=current_question+1))

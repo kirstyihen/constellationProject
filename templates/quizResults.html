@@ -11,13 +11,13 @@
     <div class="row mb-3">
         <div class="col-12 welcome-message"> 
             <h2>Your Results</h2>
-            <h1><b> {{ score }} / 3 </b></h1>
+            <h1><b> {{ score }} / {{ responses | length }} </b></h1>
             <h4>Well done!</h4>
         </div>
     </div>
     <div class="row welcome-message">
         {% for response in responses %}
-            {% if response == correct[loop.index0] %}
+            {% if response[1] %}
                 <div class="col-12">
                     Question {{loop.index}}: Correct! :)
                 </div>

@@ -27,19 +27,26 @@
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark bck-color">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="/"><b>Constellation Identifier</b></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link bigger-font" href="/starGallery">Star Gallery</a>
-                    <a class="nav-link bigger-font" href="/quiz">Quiz</a>
+                    <a class="nav-link stargallery-font" href="/starGallery">
+                        <i class="fas fa-star icon-bigger"></i><br> 
+                        Star Gallery
+                    </a>
+                    <a class="nav-link quiz-font" href="/quiz">
+                        <i class="fas fa-clipboard-list icon-bigger"></i><br>
+                        Quiz
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
+    
 
     <div class="container">   
         {% block content %}

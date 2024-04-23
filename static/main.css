@@ -6,23 +6,34 @@
 /* Larger font size for the brand */
 .navbar-brand {
     font-family: 'Stardos Stencil';
-    font-size: 60px; 
+    font-size: 80px; 
     color: white; /* White text color */
+    padding-left: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
 /* White text color for all nav links */
 .nav-link {
-    color: white !important; 
+    /*color: rgb(164, 171, 179)!important; */
+    color: white !important;;
 }
 
+.icon-bigger{
+    font-size: 40px; 
+}
 /* Larger font size for specific nav link */
-.bigger-font {
+.stargallery-font {
     margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 20px; 
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 25px; 
+}
+
+.quiz-font {
+    margin-top: 20px;
+    font-size: 25px; 
 }
 
 /* Remove default margin for navbar-brand */
@@ -30,36 +41,42 @@
     margin-right: 0;
 }
 
+.image-text {
+    font-family: 'Stardos Stencil';
+    position: absolute;
+    top: 50%;    /* Center vertically */
+    left: 50%;   /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be truly centered */
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    width: 80%; 
+}
+
 
 .welcome-message {
-    background-color: #32094f; 
-    color: white;
-    padding: 20px 0;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-
-.welcome-message * {
-    color: white !important;
-}
-
-a {
-    color: white !important;
+    background-image: url('https://pacificsciencecenter.org/wp-content/uploads/2022/07/cah-stars-navigation.jpg');
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    margin-bottom: 20px; 
 }
 
 .feature-box {
-    background-color: #32094f; 
+    background-color: #74226ddd; 
     color: white; 
     text-align: center; 
-    width: 300px;
-    height: 150px;
+    width: 400px;
+    height: 250px;
     display: flex;
     justify-content: center; 
     align-items: center;
     margin: 20px auto;
-    border-radius: 10px;
+    border-radius: 5px;
     flex-direction: column;
+}
+.feature-box:hover {
+    background-color: #32094f;
 }
 
 .feature-box h4 {
@@ -98,8 +115,8 @@ a {
 }
 .clickable-rectangle {
     width: 48%;
-    height: 80px;
-    background-color: #32094f; 
+    height: 100px;
+    background-color: #74226ddd;  
     margin: 1%;
     float: left;
     text-align: center;
@@ -107,9 +124,10 @@ a {
     cursor: pointer;
     font-size: 30px;
     transition: background-color 0.3s;
+    font-family: 'Stardos Stencil';
 }
 .clickable-rectangle:hover {
-    background-color: #b0c4de;
+    background-color: #32094f;
 }
 .container-fluid {
     text-align: center;

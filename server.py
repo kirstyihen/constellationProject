@@ -4,7 +4,6 @@ from flask import Response, request,redirect, jsonify, session
 from datetime import datetime
 app = Flask(__name__)
 
-
 dataLearning = [
     {
         "id": 1,

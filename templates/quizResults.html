@@ -9,12 +9,18 @@
 
 <div class="container-fluid pt-4"> 
     <div class="row mb-3">
-        <div class="col-12 welcome-message"> 
-            <h2>Your Results</h2>
-            <h1><b> {{ score }} / {{ responses | length }} </b></h1>
+        <div class="col-12 welcome-message1"> 
+            <h2 class = "image-text1">Your Results</h2>
+            <h1 class = "image-text1" ><b> {{ score }} / {{ responses | length }} </b></h1>
         </div>
     </div>
-    <div class="row welcome-message">
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+    <div class="row welcome-message1 image-text1">
         {% for response in responses %}
             {% if response[1] %}
                 <div class="col-12">

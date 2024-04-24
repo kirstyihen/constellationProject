@@ -12,6 +12,18 @@
     flex-direction: column;
 }
 
+.image-text1 {
+    font-family: 'Stardos Stencil';
+    position: relative;
+    top: 50%;    /* Center vertically */
+    left: 50%;   /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be truly centered */
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    width: 80%; 
+}
+
 .next-btn {
     background-color: #32094f; 
     color: white;
@@ -80,4 +92,12 @@
 
 .selected-choice:hover {
     background-color: #32094f;
+}
+
+.welcome-message1 {
+    background-image: url('https://pacificsciencecenter.org/wp-content/uploads/2022/07/cah-stars-navigation.jpg');
+    background-size: cover;
+    height: 500px;
+    position: relative; 
+    margin-bottom: 20px; 
 }

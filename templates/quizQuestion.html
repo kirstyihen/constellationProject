@@ -23,12 +23,20 @@
     </div>
     <div class="row mb-3 question-choices-cont">
         {% for choice in question.choices %}
-            <div class="question-choice unselected-choice" data-id="{{loop.index - 1}}">{{choice}}</div>
+            <div class="question-choice unselected-choice hoverable" data-id="{{loop.index - 1}}">{{choice}}</div>
         {% endfor %}      
     </div>
 
+    <div class="row question-alert-cont">
+        
+    </div>
+
+    <div class="row check-btn-cont">
+        <div class="col-12 check-btn">Check Answer</div>
+    </div>
+
     <div class="row next-btn-cont">
-        <div class="col-12 next-btn">Next question</div>
+        <div class="col-12 next-btn">Next Question</div>
     </div>
 </div>
 {% endblock %}

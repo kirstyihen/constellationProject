@@ -20,20 +20,21 @@
 }
 
 .icon-bigger{
-    font-size: 40px; 
+    font-size: 30px; 
 }
 /* Larger font size for specific nav link */
 .stargallery-font {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
-    font-size: 25px; 
+    font-size: 18px; 
+
 }
 
 .quiz-font {
-    margin-top: 20px;
-    font-size: 25px; 
+    font-size: 18px;
+}
+
+.story-button.border-0:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 /* Remove default margin for navbar-brand */
@@ -132,7 +133,6 @@
 .container-fluid {
     text-align: center;
     font-size: 24px;
-    margin-top: 50px;
 }
 
 .triangle-left, .triangle-right {
@@ -164,6 +164,11 @@
     border-radius: 5px; 
 }
 
+#consHeader {
+    color: #32094f; /* Shade of purple */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers the text if necessary */
+}
 
 .img-fluid {
     width: 100%;
@@ -178,4 +183,23 @@
 .info-section li {
     margin-left: 0px;  
     list-style-position: outside;  
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 1px white;
+    animation: twinkle 2s infinite ease-in-out;
 }

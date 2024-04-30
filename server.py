@@ -172,7 +172,7 @@ def render_page(id):
     entry = next((item for item in dataLearning if item["id"] == id), None)
     if entry:
         log_activity(entry['name'])
-        return render_template('orionBelt.html', data=entry)
+        return render_template('constellationTemplate.html', data=entry)
     else:
         return "Page not found", 404
 
@@ -187,22 +187,6 @@ def start_quiz():
     quiz_responses.clear()
     score = 0
     return render_template('quizMain.html')
-
-@app.route('/leo')
-def render_leo():
-    return render_template('leo.html')
-
-@app.route('/orionBelt')
-def render_orion():
-    return render_template('orionBelt.html')
-
-@app.route('/littleDipper')
-def render_ld():
-    return render_template('littleDipper.html')
-
-@app.route('/bigDipper')
-def render_bd():
-    return render_template('bigDipper.html')
 
 # AJAX FUNCTIONS
 

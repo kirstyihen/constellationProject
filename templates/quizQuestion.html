@@ -6,10 +6,15 @@
 
 <script>
     question = JSON.parse('{{ question|tojson|safe }}')
+    // num_questions = JSON.parse('{{ num_questions|tojson|safe }}')
 </script>
 
 <div class="container-fluid p-4 quiz-main-cont"> 
+    
     <div class="row mb-3 question-card">
+        <div class="col-12 mb-1 question-num-text">
+            Question {{question.id + 1}} of {{num_questions}}
+        </div>
         {% if question.image_url | length != 0 %}
             <div class="col-12 p-0">
                 <img class="question-img" alt="{{question.image_alt}}" src={{question.image_url}}>

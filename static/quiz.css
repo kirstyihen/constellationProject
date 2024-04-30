@@ -34,6 +34,11 @@
     padding: 30px;
 }
 
+.question-num-text {
+    color: rgb(86, 86, 86);
+    padding: 10px;
+}
+
 .question-card {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(36, 36, 36, 0.2);
@@ -43,12 +48,12 @@
     max-height: 500px;
     width: 100%;
     object-fit: cover;
-    border-radius: 5px 5px 0 0;
 }
 
 .quiz-main-cont {
     margin: auto;
     width: 750px;
+    font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -58,8 +63,8 @@
 }
 
 .question-text {
-    font-size: 2rem;
-    color: rgb(86, 86, 86);
+    font-size: 1.7rem;
+    color: black;
     padding: 30px;
 }
 
@@ -94,7 +99,7 @@
 
 .unselected-choice {
     background-color: white;
-    color: rgb(86, 86, 86);
+    color: black;
 }
 
 .selected-choice {

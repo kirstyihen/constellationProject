@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    console.log(question);
+    // console.log(num_questions);
+    if (question.next_id === "end")
+        $(".next-btn").html("See Results");
 
     let selectedChoice = "";
     let hasChecked = false;

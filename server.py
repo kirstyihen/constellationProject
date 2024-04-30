@@ -20,18 +20,18 @@ dataLearning = [
         "next_id": 2
     },
     {
-    "id": 2,
-    "name": "Leo",
-    "image": "https://arabiannightsrum.com/wp-content/uploads/2021/02/Leo-star-constellation-810x500.png",
-    "facts": [
-        "Leo is the 12th largest constellation in size",
-        "Leo belongs to the popular Zodiac family of constellations (Aries, Gemini, etc)",
-        "In English, the constellation is known as the Lion."
-    ],
-    "myth": "The Greeks associated Leo with the Nemean lion, the beast defeated by Zeus’ son, Heracles (Hercules), during the first of his twelve labors toward repenting for murdering his family. Ancient pioneers of science and literature wrote that the lion was placed among the constellations because it was the king of beasts.",
-    "finding_tips": "First locate the Big Dipper, then follow the curve of its handle away from the dipper's bowl until you reach a bright star. This star is part of Leo's backward question mark shape, which outlines the lion's mane.",
-    "prev_id": 1,
-    "next_id": 3
+        "id": 2,
+        "name": "Leo",
+        "image": "https://arabiannightsrum.com/wp-content/uploads/2021/02/Leo-star-constellation-810x500.png",
+        "facts": [
+            "Leo is the 12th largest constellation in size",
+            "Leo belongs to the popular Zodiac family of constellations (Aries, Gemini, etc)",
+            "In English, the constellation is known as the Lion."
+        ],
+        "myth": "The Greeks associated Leo with the Nemean lion, the beast defeated by Zeus’ son, Heracles (Hercules), during the first of his twelve labors toward repenting for murdering his family. Ancient pioneers of science and literature wrote that the lion was placed among the constellations because it was the king of beasts.",
+        "finding_tips": "First locate the Big Dipper, then follow the curve of its handle away from the dipper's bowl until you reach a bright star. This star is part of Leo's backward question mark shape, which outlines the lion's mane.",
+        "prev_id": 1,
+        "next_id": 3
     },
 
     {
@@ -150,7 +150,7 @@ questions = [
         "choices": ["Little Dipper", "Orion", "Big Dipper", "Leo"],
         "answer_id": "3", 
         "answer_img_url": "https://i.ibb.co/LDywjHS/Screenshot-2024-04-29-at-10-38-09-PM.png",
-        "next_id": "8",
+        "next_id": "end",
     },
 ]
 
@@ -226,7 +226,7 @@ def display_quiz(id):
         abort(403)
 
     current_question = id     
-    return render_template('quizQuestion.html', question=questions[id])
+    return render_template('quizQuestion.html', question=questions[id], num_questions=len(questions))
 
 @app.route('/quiz/log_response/<response_id>')
 def add_response(response_id):

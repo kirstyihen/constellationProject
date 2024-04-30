@@ -5,7 +5,7 @@
     <div class="row">
         <!-- Title Column (Full Width) -->
         <div class="col-12">
-            <h2 class="text-center">{{ data.name }}</h2>
+            <h2 class="text-center" id ="consHeader">{{ data.name }}</h2>
         </div>
     </div>
     <div class="row">
@@ -15,22 +15,41 @@
         </div>
         
         <!-- Text Column -->
-        <div class="col-md-6">
-            <div class="info-section">
-                <p><strong>Quick facts:</strong></p>
-                <ul>
-                    {% for fact in data.facts %}
-                    <li>{{ fact }}</li>
-                    {% endfor %}
-                </ul>
-                <p><strong>The story behind:</strong></p>
-                <ul>
-                    <li>{{ data.myth }}</li>
-                </ul>
-                <p><strong>How to find it:</strong></p>
-                <ul>
-                    <li>{{ data.finding_tips }}</li>
-                </ul>
+        <div class="col-md-6" id="info-container">
+            <div class="info-block" id="facts-block">
+                <!-- Quick Facts Always Visible -->
+                <p class = "header-color">Quick Facts</p>
+                <div>
+                    <ul>
+                        {% for fact in data.facts %}
+                        <li class="twinkle-bullet">{{ fact }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-block" id="tips-block">
+                <!-- How to Find It Always Visible -->
+                <p class = "header-color">How to Find It</p>
+                <div>
+                    <ul>
+                        <li class="twinkle-bullet">{{ data.finding_tips }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-block" id="myth-block">
+                <!-- The Story Behind Dropdown -->
+                <p>
+                    <button class="btn story-button toggle-button" type="button" data-bs-toggle="collapse" data-bs-target="#myth" aria-expanded="false" aria-controls="myth">
+                        The Story Behind
+                    </button>
+                </p>
+                <div class="collapse" id="myth">
+                    <ul>
+                        <li class="twinkle-bullet">{{ data.myth }}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

@@ -165,9 +165,9 @@
 }
 
 #consHeader {
-    color: #32094f; /* Shade of purple */
-    font-weight: bold; /* Makes the text bold */
-    text-align: center; /* Centers the text if necessary */
+    color: #32094f;
+    font-weight: bold; 
+    text-align: center;
 }
 
 .img-fluid {
@@ -203,3 +203,77 @@
     box-shadow: 0 0 4px 1px white;
     animation: twinkle 2s infinite ease-in-out;
 }
+
+#starfield {
+    pointer-events: none; /* This makes the div transparent to mouse events */
+}
+
+
+/* Container to keep stars within the navbar bounds */
+#starfield {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.header-color {
+    color: #32094f;
+    font-size: 24px;/* This is a shade of purple. You can adjust the hex code to the exact shade of purple you want */
+    text-align: center;
+    font-weight: bold;
+}
+
+.story-button {
+    background-color: #32094f; /* Background color */
+    border-color: #32094f; /* Border color */
+    color: white; /* Text color */
+    text-align: center; /* Centers the text */
+    display: block; /* Makes the button block level for width control */
+    margin: 0 auto; /* Centers the button horizontally */
+    font-size: 24px; /* Matches font size with other headers */
+    font-weight: bold; /* Makes the text bold */
+    width: auto; /* Auto width based on content */
+    padding: 10px 20px; /* Padding for better button appearance */
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s; /* Smooth transition for color and background changes */
+    outline: none; /* Removes the default focus outline */
+}
+
+.story-button:hover, .story-button:focus {
+    color: #32094f; /* Change text color to purple on hover and focus */
+    background-color: transparent; /* Transparent background on hover and focus */
+    border-color: #32094f; /* Change border color to purple on hover and focus */
+}
+
+/* Add this to reset focus style to default when not hovering */
+.story-button:not(:hover):focus {
+    color: white; /* Revert to default text color */
+    background-color: #32094f; /* Revert to default background color */
+    border-color: #32094f; /* Revert to default border color */
+}
+
+
+
+
+
+
+.twinkle-bullet {
+    list-style: none; /* Optional: removes default bullet point styling */
+    position: relative;
+}
+
+.twinkle-bullet:before {
+    content: '•'; /* Unicode for bullet symbol */
+    position: absolute;
+    left: -1em; /* Adjust position as needed */
+    animation: twinkle 2s infinite ease-in-out;
+    color: #32094f; /* You can choose a different color if you like */
+}
+
+#info-container {
+    text-align: left; /* Aligns text to the left */
+}
+
+

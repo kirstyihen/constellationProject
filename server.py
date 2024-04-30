@@ -37,7 +37,7 @@ dataLearning = [
     {
         "id": 3,
         "name": "Big Dipper",
-        "image": "https://blog.nameastarlive.com/wp-content/uploads/uma_pinterest_560.jpg",
+        "image": "https://lovethenightsky.com/wp-content/uploads/2020/11/Ursa-Major-as-a-Great-Bear-scaled.jpg",
         "facts": [
             "The Big Dipper is an asterism of the constellation Ursa Major, the Greater Bear.",
             "The stars of the Big Dipper outline the Bear’s tail and hindquarters.",
@@ -51,7 +51,7 @@ dataLearning = [
     {
         "id": 4,
         "name": "Little Dipper",
-        "image": "https://cdn.mos.cms.futurecdn.net/8dAkqvtHb3Y7Vcjx2N8q3g-1200-80.jpg",
+        "image": "https://eblanchardblog.files.wordpress.com/2018/06/shutterstock_569889802.jpg",
         "facts": [
             "The Little Dipper is an asterism whose stars belong to the constellation Ursa Minor, “the Little Bear.”",
             "It is smaller and fainter than the Big Dipper."

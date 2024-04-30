@@ -51,6 +51,12 @@
     width: 750px;
 }
 
+@media only screen and (max-width: 800px) {
+    .quiz-main-cont {
+      width: 90%;
+    }
+}
+
 .question-text {
     font-size: 2rem;
     color: rgb(86, 86, 86);

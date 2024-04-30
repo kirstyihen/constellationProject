@@ -34,7 +34,7 @@ $(document).ready(function() {
         $(".question-alert-cont").append(alert_msg);
         
         hasChecked = true;
-        if (question.type === "id")
+        if (question.type === "identification")
             $(".question-img").attr("src", question.answer_img_url);
         $('.question-choice').removeClass('hoverable');
         $('.next-btn').show();

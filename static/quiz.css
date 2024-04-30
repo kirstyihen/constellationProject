@@ -81,6 +81,7 @@
     box-shadow: 0 0 7px rgba(36, 36, 36, 0.2);
     border: 1px solid lightgrey;
     padding: 30px;
+    margin-bottom: 10px;
 }
 
 .hoverable {

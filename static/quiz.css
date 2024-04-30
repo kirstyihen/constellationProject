@@ -24,7 +24,7 @@
     width: 80%; 
 }
 
-.next-btn, .check-btn {
+.next-btn, .check-btn, .start-btn {
     background-color: #32094f; 
     color: white;
     padding: 10px;

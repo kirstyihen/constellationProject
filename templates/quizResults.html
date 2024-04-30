@@ -7,6 +7,8 @@
 
 {% block content %}
 
+<script type="text/javascript" src="{{ url_for('static', filename = 'quizresult.js') }}"></script>
+
 <div class="container-fluid pt-4"> 
     <div class="row mb-3">
         <div class="col-12 welcome-message1"> 
@@ -14,25 +16,9 @@
             <h1 class = "image-text1" ><b> {{ score }} / {{ responses | length }} </b></h1>
         </div>
     </div>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
-    <div class="row welcome-message1 image-text1">
-        {% for response in responses %}
-            {% if response[1] %}
-                <div class="col-12">
-                    Question {{loop.index}}: Correct! :)
-                </div>
-            {% else %}
-                <div class="col-12">
-                    Question {{loop.index}}: Incorrect :(
-                </div>
-            {% endif %}
-        {% endfor %}  
-    </div>
+    <div class = "row mb-3 next-btn-cont">
+        <div class="col-12 start-btn">Start Over</div>
+    <div>
 </div>
 {% endblock %}
 

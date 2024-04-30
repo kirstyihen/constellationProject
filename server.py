@@ -208,7 +208,7 @@ def save_shop():
 def results_quiz():
     global quiz_responses, incorrect, score
     print("responses:", quiz_responses)
-    return render_template('quizResults.html', responses=quiz_responses, score = score) 
+    return render_template('quizResults.html', responses=quiz_responses, score = score ) 
 
 
 @app.route('/quiz/<id>')

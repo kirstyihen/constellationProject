@@ -42,4 +42,5 @@ $(document).ready(function() {
     $(".next-btn").click(function(){
         window.location.href = `/quiz/log_response/${selectedChoice}`;
     })
+
 })

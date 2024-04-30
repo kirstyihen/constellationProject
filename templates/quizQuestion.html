@@ -21,7 +21,7 @@
             {{question.question}}
         </div>
     </div>
-    <div class="row mb-3 question-choices-cont">
+    <div class="row mb-1 question-choices-cont">
         {% for choice in question.choices %}
             <div class="question-choice unselected-choice hoverable" data-id="{{loop.index - 1}}">{{choice}}</div>
         {% endfor %}      

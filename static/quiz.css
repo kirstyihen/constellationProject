@@ -51,6 +51,12 @@
     width: 750px;
 }
 
+@media only screen and (max-width: 800px) {
+    .quiz-main-cont {
+      width: 90%;
+    }
+}
+
 .question-text {
     font-size: 2rem;
     color: rgb(86, 86, 86);
@@ -75,6 +81,7 @@
     box-shadow: 0 0 7px rgba(36, 36, 36, 0.2);
     border: 1px solid lightgrey;
     padding: 30px;
+    margin-bottom: 10px;
 }
 
 .hoverable {

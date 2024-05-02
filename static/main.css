@@ -276,3 +276,24 @@
 }
 
 
+.falling-star {
+    position: absolute;
+    width: 3px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8; 
+    animation: fall 5s infinite linear;
+    box-shadow: 0 0 4px 1px white;
+}
+
+@keyframes fall {
+    0% {
+        top: -10px;
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}

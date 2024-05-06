@@ -153,14 +153,15 @@ questions = [
         "next_id": "end",
     },
 ]
-
+userActivity = []
 current_question = 0
 quiz_responses = []
 score = 0
 
 def log_activity(page_name):
     entry = f"{datetime.now()}: Page accessed - {page_name}"
-    dataLearning.append(entry)
+    print(entry)
+    userActivity.append(entry)
 
 #routes
 @app.route('/', methods=['GET'])

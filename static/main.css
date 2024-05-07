@@ -168,6 +168,7 @@
     color: #32094f;
     font-weight: bold; 
     text-align: center;
+    padding: 20px 0; /* Added vertical padding */
 }
 
 .img-fluid {
@@ -253,6 +254,15 @@
     border-color: #32094f;
 }
 
+
+.finding-tips, .myth-content {
+    padding-left: 31px;
+
+}
+
+#tips-block {
+    margin-bottom: 30px;
+}
 
 
 

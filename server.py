@@ -43,7 +43,7 @@ dataLearning = [
             "The stars of the Big Dipper outline the Bear’s tail and hindquarters.",
             "As Earth spins, the Big Dipper and its sky neighbor, the Little Dipper, rotate around the North Star, also known as Polaris."
         ],
-        "myth": "In Greek mythology, the constellations Ursa Major and Ursa Minor are associated with the myth of Arcas and his mother Callisto. Callisto was a nymph who had a son by Zeus and was transformed into a bear by the jealous Hera. Callisto’s son, Arcas, grew up to be a hunter and became king of Arcadia. During one of his hunts, he came across the bear and, not knowing that it was his mother, he aimed an arrow at it. Zeus prevented this by placing the mother and son into the sky as theconstellations Ursa Major and Ursa Minor. Castillo is associated with Ursa Major.",
+        "myth": "In Greek mythology, the constellations Ursa Major and Ursa Minor are associated with the myth of Arcas and his mother Callisto. Callisto was a nymph who had a son by Zeus and was transformed into a bear by the jealous Hera. Callisto’s son, Arcas, grew up to be a hunter and became king of Arcadia. During one of his hunts, he came across the bear and, not knowing that it was his mother, he aimed an arrow at it. Zeus prevented this by placing the mother and son into the sky as the constellations Ursa Major and Ursa Minor. Castillo is associated with Ursa Major.",
         "finding_tips": "The Big Dipper is one of the easiest star patterns to locate. It’s visible just about every clear night in the Northern Hemisphere. It has two parts, a bowl and a handle. So, look for a pattern that mimics a big dot-to-dot of a kitchen ladle!",
         "prev_id": 2,
         "next_id": 4
